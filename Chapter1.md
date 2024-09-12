@@ -58,6 +58,10 @@ markmap:
   - 无穷小量与有界量的积仍是无穷小
 
 ### 无穷大
+- 无穷大与无界的关系
+  - 无界不等于无穷大
+  - $f(x)$在$\forall\mathring{u}(x)$内无界$\Leftrightarrow\exists\{x_n\}$满足$\lim_{n\rightarrow\infty}x_n=x_0$且$\lim_{n\rightarrow x_0}f(x_n)=\infty$
+  - $f(x)$在$[a,+\infty]$内的任意无限区间无界$\Leftrightarrow\exists\{x_n\}$满足$\lim_{n\rightarrow\infty}x_n=\infty$且$\lim_{n\rightarrow\infty}f(x_n)=\infty$
 
 ### 常考题型
 #### 极限的概念、性质及存在准则
@@ -79,20 +83,10 @@ markmap:
 > 5. 660P44 125（有界性判定）<br>
 
 #### 求极限
-##### 方法
-  - 常用极限
-  - 等价无穷小
-  - 洛必达法则
-  - 泰勒展开
-  - 夹逼准则
-  - 定积分的定义
-  - 单调有界准则
-
-##### 类型
-  - $\frac{0}{0}$
-    1. 洛必达
-    2. 等价无穷小
-    3. 泰勒
+- $\frac{0}{0}$
+  1. 洛必达
+  2. 等价无穷小
+  3. 泰勒
 
 > 1. 高辅例5及P22注<br>
 > * 当$x\rightarrow0$时，$(1+x)^\alpha-1\sim\alpha x$这个结论可推广为，若$ \alpha(x)\rightarrow0, \alpha(x)\beta(x)\rightarrow0 $，则$ (1+\alpha(x))^{\beta(x)}-1\sim\alpha(x)\beta(x) $
@@ -116,7 +110,7 @@ markmap:
   > 1. 660 P8 11
 
   - $1^\infty$
-    1. 凑型式：$\lim[1+\phi(x)]^{\frac{1}{\phi(x)}}=e$，其中$\lim\phi(x)=0(\phi(x)\neq0)$
+    1. 凑型式：$\lim[1+\varphi(x)]^{\frac{1}{\varphi(x)}}=e$，其中$\lim\varphi(x)=0(\varphi(x)\neq0)$
     2. 改写为指数
   
   > 1. 高辅P28例3
@@ -167,16 +161,23 @@ markmap:
 > 2. 660P45 128
 
 #### 确定极限式中的参数
+- 由已知极限推未知极限
+  - 已知极限直接推出未知极限
+  - 未知极限凑出已知极限
+  - 特殊函数法
 > 1. 660P47 134（泰勒）
+> 2. 660P48 135（已知极限推未知极限）
 
 #### 无穷小量阶的比较
 > 常用$\frac{0}{0}$极限的方法（洛必达，等价无穷小，泰勒）
 
 > 1. 高辅P40方法5<br>
 > 结论：<br>
-> 若$f(x)$在$x=0$的某邻域内连续，且当$x\rightarrow0$时$f(x)$是$x$的$m$阶无穷小，$\phi(x)$是$x$的$n$阶无穷小，则当$x\rightarrow0$时$F(x)=\int^{\phi(x)}_0f(t)dt$是$x$的$n(m-1)$阶无穷小。
+> 若$f(x)$在$x=0$的某邻域内连续，且当$x\rightarrow0$时$f(x)$是$x$的$m$阶无穷小，$\varphi(x)$是$x$的$n$阶无穷小，则当$x\rightarrow0$时$F(x)=\int^{\varphi(x)}_0f(t)dt$是$x$的$n(m-1)$阶无穷小。
 > 2. 高辅P43注（泰勒）<br>
-> 奇函数的泰勒只有奇次项，偶函数的泰勒只有偶次项
+> 奇函数的泰勒只有奇次项，偶函数的泰勒只有偶次项<br>
+> 3. 660P48 139
+> 同阶无穷小相加减阶数可能会变高
 
 ## 连续
 ### 概念与性质
