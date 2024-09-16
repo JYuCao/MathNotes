@@ -12,3 +12,6 @@ markmap:
 当$n$足够大时，$n!\approx\sqrt{2\pi n}(\frac{n}{e})^n$
 ### 和差化积/积化和差
 ### $\arctan(x)+\arctan(\frac{1}{x}) = \frac{\pi}{2}(x>0)$
+
+### 立方和（差）公式：$1\pm x^3=(1\pm x)(1\mp x+x^2)$ 
+
