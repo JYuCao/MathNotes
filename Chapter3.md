@@ -22,10 +22,12 @@ markmap:
 > 3. 高辅P97例9（分母为三角函数+常数的处理方法）<br>
 > 三角函数万能代换：$\tan\frac{x}{2}=t$，则<br>
 > $\int R(\sin x,\cos x)dx=\int R(\frac{2t}{1+t^2},\frac{1-t^2}{1+t^2})\frac{2}{1+t^2}dt$<br><br>
-> 3. 高辅P98例11（分母为三角函数相乘的处理方法）
-> 3. 高辅P98例12（分母为三角函数相乘的处理方法）
+> 4. 高辅P98例11（分母为三角函数相乘的处理方法）
+> 5. 高辅P98例12（分母为三角函数相乘的处理方法）
 >   - 满足$R(-\sin x,\cos x)=-R(\sin x,\cos x)$，凑$d\cos x$
->   - 满足$R(-\sin x,-\cos x)=R(\sin x,\cos x)$，凑$d\tan x$
+>   - 满足$R(-\sin x,-\cos x)=R(\sin x,\cos x)$，凑$d\tan x$<br><br>
+> 6. 660P22 52（第一类换元）
+> 7. 660P22 54（第一类换元）
 
 #### 不定积分杂例
 
@@ -68,18 +70,32 @@ $\int_a^bf(x)g(x)dx=f(\xi)\int_a^bg(x)dx,a\leq\xi\leq b$
 > 2. 高辅P106注（广义积分中值定理）
 
 #### 定积分的计算
+- 三角函数定积分公式
+  - $\int_0^{\frac{\pi}{2}} f(\sin x)dx = \int_0^{\frac{\pi}{2}} f(\cos x)dx$
+  - $\int_0^{\frac{\pi}{2}} f(\sin x)dx = \int_{\frac{\pi}{2}}^{\pi} f(\sin x)dx$
+  - $\int_0^{\pi} f(\sin x)dx = 2\int_0^{\frac{\pi}{2}} f(\sin x)dx$
+  - $\int_0^\pi x f(\sin x)dx=\frac{\pi}{2}\int_0^\pi f(\sin x)dx$
+  - 华里士公式（点火公式）
+  - 例2结论
+
 > 1. 高辅P107例2（周期性）
 > 2. 高辅P108例4（周期性，证明了下列重要结论）<br>
-> $\int_0^{2\pi} \cos^n xdx=4\int_0^{\frac{\pi}{2}}\sin^n xdx=4\int_0^{\frac{\pi}{2}}\sin^n xdx(n为偶数)$<br>
-(使用华里士公式)<br>
-> $\int_0^{2\pi} \cos^n xdx=\int_0^{2\pi}\sin^n xdx=0(n为奇数)$<br><br>
-> 补充：$\int_0^\pi x\sin xdx=\frac{\pi}{2}\int_0^\pi\sin xdx=\pi$<br><br>
+> $  \left\{
+    \begin{aligned}
+      \int_0^{2\pi} \cos^n xdx=4\int_0^{\frac{\pi}{2}}\sin^n xdx=4\int_0^{\frac{\pi}{2}}\sin^n xdx(n为偶数) \\
+      \int_0^{2\pi} \cos^n xdx=\int_0^{2\pi}\sin^n xdx=0(n为奇数)
+    \end{aligned}
+  \right.$<br><br>
+> 补充：$\int_0^\pi x f(\sin x)dx=\frac{\pi}{2}\int_0^\pi f(\sin x)dx$（其实可由4结论推出）<br><br>
 > 3. 高辅P109例7（构造变上限积分函数求解抽象积分）<br><br>
 > 4. 高辅P109例8（三角函数，利用变量代换计算定积分）<br>
 > 一般地，$\int_a^bf(x)dx\overset{x=a+b-t}{====}\int_a^bf(a+b-t)dt$
-> 5. 高辅P110例11（分部解抽象函数定积分）<br><br>
-> 6. 高辅P111例12（凑因子解抽象函数定积分）
-> 7. 高辅P111注（综合4,6）
+> 5. 高辅P110例11（分部解抽象函数定积分）
+> 6. 660P26 64（变量代换，方法同4）<br><br>
+> 7. 高辅P111例12（凑因子解抽象函数定积分）
+> 8. 高辅P111注（综合4,6）<br><br>
+> 9. 660P24 59（换元分部）
+> 10. 660P25 61（抽象函数换元）
 
 #### 变上限积分的函数及其应用
 - 连续性：函数在区间上可积，则变上限积分连续
@@ -144,7 +160,9 @@ $\int_a^bf(x)g(x)dx=f(\xi)\int_a^bg(x)dx,a\leq\xi\leq b$
 > 1. 高辅P124例2（反常/瑕积分结合判别）
 > 2. 高辅P124例3（瑕积分判别）<br>
 > $\lim_{x\rightarrow0}x^\xi \ln x = 0(\xi为任意正常数)$<br>
-> 上式中$\xi$可以取的非常小，哪怕是0.0001，整个式子也趋于0
+> 上式中$\xi$可以取的非常小，哪怕是0.0001，整个式子也趋于0<br><br>
+> 3. 660P27 68（反常积分敛散性求参数）<br><br>
+> 3. 660P27 69（求反常积分，带$e^x$的变换）
 
 #### 反常积分的计算
 > 1. 高辅P126例4（换元）
@@ -153,8 +171,11 @@ $\int_a^bf(x)g(x)dx=f(\xi)\int_a^bg(x)dx,a\leq\xi\leq b$
 ### 几何应用
 - 平面图形的面积（$S=\iint_D1d\sigma$）
 - 空间体的体积
-  - 旋转体的体积（$V=2\pi\iint_Dr(x,y)d\sigma$）
+  - 旋转体的体积
+    - 二重积分法：$V=2\pi\iint_Dr(x,y)d\sigma$
+    - 古尔丁定理：$V=2\pi r\cdot S$（r为形心到旋转轴的距离）
   - 已知横截面的面积（$V=\int_a^bS(x)dx$）
+> 形心公式：$(\frac{\iint_Dxdxdy}{\iint_Ddxdy},\frac{\iint_Dydxdy}{\iint_Ddxdy})$
 
 ### 曲线弧长
 - 直角坐标：$s=\int_a^b\sqrt{1+y'^2}dx$
@@ -172,5 +193,9 @@ $\int_a^bf(x)g(x)dx=f(\xi)\int_a^bg(x)dx,a\leq\xi\leq b$
 ### 常考题型
 #### 几何应用
 > 1. 高辅P129注（函数围成面积的最小值）
+> 2. 660P28 70（摆线）
+> 3. 660P28 71（星形线，答案含隐函数表示）
+
 
 #### 物理应用
+> 1. 660P29 74（体积、速度、功）
